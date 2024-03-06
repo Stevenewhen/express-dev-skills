@@ -1,22 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Express Developer Skills</title>
-</head>
-<body>
-  <a href="/">Home</a>
-    <h1>Express Developer Skills</h1>
+<%- include('../partials/header')%>
+
+
     <ul>
       <% skills.forEach(function(s) { %>
         <li>
-          <a href="/skills/<%= s.id%>"><%= s.skill %></a>
+          <a href="/skills/<%= s.id %>"><%= s.skill %></a>
             - 
           <%= s.done ? 'done' : 'not done' %>
         </li>
       <% }); %>
     </ul>
-  </body>
-</html>
+<a href="/skills/new">Add New Skill</a>
+
+ <%- include('../partials/footer')%>

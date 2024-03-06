@@ -11,7 +11,18 @@ var skillsCtrl = require('../controllers/skills');
 //GET all skills
 router.get('/', skillsCtrl.index)
 
+//GET router for form--> /skills/new
+router.get('/new', skillsCtrl.new)
 
+//GET one skill --> /:skillsId
 router.get('/:skillsId', skillsCtrl.show);
+
+//POST a skill --> /skills
+router.post('/', skillsCtrl.create);
+
+//DELETE a skill
+router.delete('/:id', skillsCtrl.delete)
+
+
 
 module.exports = router;

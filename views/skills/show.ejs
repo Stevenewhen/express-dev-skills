@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <a href="/">Home</a> | <a href="/skills">Back to Skills</a>
-    <h1>Express Developer Skills</h1>
-</head>
-<body>
+<%- include('../partials/header')%>
+
     <h3><%= skill.skill %></h3>
     <h3>Complete: <%= skill.done ? 'Yes' : 'No' %></h3>
-  </body>  
-</html>
+
+        <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST" class="delete-form">
+          <button type="submit">Delete Skill</button>
+        </form>
+    
+
+<%- include('../partials/footer')%>
