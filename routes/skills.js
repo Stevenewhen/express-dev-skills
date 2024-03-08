@@ -23,6 +23,11 @@ router.post('/', skillsCtrl.create);
 //DELETE a skill
 router.delete('/:id', skillsCtrl.delete)
 
+//EDIT
+router.get('/edit/:id', skillsCtrl.edit);
+
+//UPDATE
+router.put('/:id', skillsCtrl.update);
 
 
 module.exports = router;

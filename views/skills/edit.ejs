@@ -1,0 +1,20 @@
+<%- include('../partials/header')%>
+
+<form method="POST" action="/skills/<%= skill.id %>?_method=PUT">
+    <fieldset>
+      <legend>Edit Skill</legend>
+      <!-- TITLE -->
+      <p>
+        <label for="skill">Editing: <%= skill.skill %></label><br>
+        <input id="skill" type="text" name="skill" value="<%= skill.skill %>"/>
+      </p>
+  
+    <!-- BUTTON -->
+    <p>
+      <button type="submit">Save Edit</button>
+    </p>
+  </form>
+
+
+
+<%- include('../partials/footer')%>

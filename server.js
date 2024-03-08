@@ -24,6 +24,8 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/skills', skillsRouter);
+app.use('/skills', require('./routes/skills'));
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
